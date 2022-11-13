@@ -7,7 +7,78 @@ body {
   margin: 0;
   height: auto;
   background-attachment: fixed;
-  background-color: #98C9A3;
+  background-color: var(--primary-color)
+}
+
+
+
+:root {
+  --primary-color: #98C9A3;
+  --secondary-color: #EFD075;
+}
+
+
+/* ------------Darkmode-----------  */
+
+
+body.dark {
+  background-color: #272727;
+}
+
+body.dark .yellow-circle,
+body.dark .menu,
+body.dark .fun-butt,
+body.dark .project-container,
+body.dark .undrekontainer  {
+  background-color: #474747;
+}
+
+body.dark .card {
+background-color: #adaca5;
+
+}
+
+
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+
+.label {
+  display: flex;
+  border-radius: 50px;
+  height: 26px;
+  width: 50px;
+  background-color: #404040;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+}
+
+.fa-moon {
+  color: var(--secondary-color)
+}
+
+.fa-sun {
+  color: #eca944;
+}
+
+.ball {
+  width: 22px;
+  height: 22px;
+  background-color: white;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  transition: 0.3s linear;
+}
+
+.checkbox:checked+.label .ball {
+  transform: translateX(24px);
 }
 
 
@@ -86,7 +157,7 @@ body {
 
 
 .yellow-circle {
-  background-color: #EFD075;
+  background-color: var(--secondary-color);
   border-radius: 50%;
   margin-top: 22rem;
   /* box-shadow: 0 0 20px #EFD075, 0 0 30px #EFD075, 0 0 40px #EFD075, 0 0 50px white, 0 0 60px white; */
@@ -115,21 +186,16 @@ a {
   border-left: none;
 }
 
-/* .footer {
-width: 100vw;
-background-color: #7fc08c;
-position: fixed;
-height: 5em;
-}
- */
+
+*/
+
 /*------- Projectpage----------- */
 .project-container {
   color: white;
   margin: 5%;
   height: auto;
   background-attachment: fixed;
-  background-color: #98C9A3;
-
+  background-color: var(--primary-color)
 }
 
 
@@ -196,7 +262,7 @@ height: 5em;
   height: 122px;
   justify-content: center;
   align-items: center;
- 
+
 }
 
 .line {
@@ -310,7 +376,7 @@ height: 5em;
 .working-exp-1 {
   display: flex;
   flex-direction: column;
-  padding-left: 25%;
+  padding-left: 5%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -517,12 +583,14 @@ height: 5em;
 .modal-content2,
 .modal-content {
   display: flex;
+  flex-direction: column;
   background-color: #fffff0;
-  margin: 15% auto;
-  padding: 20px;
+  margin: auto;
+  padding: 10px;
   border: 1px solid #888;
-  width: 80%;
+  width: 60rem;
   border-radius: 1.5rem;
+
 }
 
 .close2,
@@ -531,8 +599,7 @@ height: 5em;
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;
-  align-self: flex-start;
- 
+  align-self: flex-end;
 }
 
 .close2:hover,
@@ -546,13 +613,15 @@ height: 5em;
 .picture-box,
 .picture-text-box,
 .picture-text-box2 {
-  width: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   color: black;
+  margin: 5%;
 }
+
+
 
 
 
@@ -582,7 +651,7 @@ height: 5em;
 
   .working-exp-1 {
     padding-left: 0%;
-    padding-top: 20rem;
+    padding-top: 5rem;
 
   }
 

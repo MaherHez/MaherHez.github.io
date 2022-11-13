@@ -10,7 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
-    <script src="js.js" async></script>
+    <script src="https://kit.fontawesome.com/1b96562599.js" crossorigin="anonymous"></script>
+    <script src="js.js" defer></script>
+    
 </head>
 
 <body>
@@ -37,13 +39,24 @@
         </div>
     </div>
 
+    <div>
+        <input type="checkbox" class="checkbox" id="checkbox">
+        <label for="checkbox" class="label">
+            <i class="fa-sharp fa-solid fa-moon"></i>
+            <i class="fa-sharp fa-solid fa-sun"></i>
+            <div class="ball"></div>
+        </label>
+
+    </div>
+
+
 
 
     <div class="project-container">
         <div class="undrekontainer">
             <div class="projektbox">
 
-                <div id="btn" class="card">
+                <div class="card btn">
                     <div class="card-content">
                         <img class="card-picture" src="bilder/projectpic.jpg"
                             alt="All four projects in one small picture">
@@ -69,19 +82,35 @@
 
                 <!-- Button 1 refering to first card -->
                 <div class="modal">
-                    <div class="modal-content">
+                    <div id="overflow" class="modal-content">
+                        <span class="close">&times;</span>
+                        <div class="picture-text-box">
+                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"</p>
+                            <img src="bilder/orange.webp" alt="" width="250px">
+                        </div>
 
                         <div class="picture-text-box">
                             <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"</p>
                             <img src="bilder/orange.webp" alt="" width="250px">
-                            <span class="close">&times;</span>
                         </div>
+
+
+                        <div class="picture-text-box">
+                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"</p>
+                            <img src="bilder/orange.webp" alt="" width="250px">
+                        </div>
+
+
+
 
                     </div>
                 </div>
 
-                <div class="card btn2">
+
+                <div class="card btn">
                     <div class="card-content">
                         <img class="card-picture" src="bilder/RSP.jpg" alt="picture of oranges with a pink bakground">
                         <h1 class="card-text-header">Rock Scissors Paper</h1>
@@ -114,13 +143,14 @@
                 </div>
 
                 <!-- button 2 refering to second card -->
-                <div class="modal2">
+                <div class="modal">
                     <div class="modal-content2">
-
+                        <span class="close">&times;</span>
                         <div class="picture-text-box2">
+                            
                             <p>The game is under construction</p>
-                            <img src="bilder/orange.webp"width="250px" alt="">
-                            <span class="close2">&times;</span>
+                            <img src="bilder/orange.webp" width="250px" alt="">
+
                         </div>
 
                     </div>

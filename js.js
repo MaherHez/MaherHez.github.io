@@ -1,43 +1,43 @@
 //--------- JS-modal-projectpage ------------///
 
-const modal = document.querySelector(".modal");
-const btn = document.getElementById("btn")
-const span = document.querySelector(".close");
+const modal = document.querySelectorAll(".modal");
+const btn = document.querySelectorAll(".btn")
+const span = document.querySelectorAll(".close");
 
-btn.onclick = function () {
-    modal.style.display = "block";
-}
+var currentIndex;
 
-span.onclick = function () {
-    modal.style.display = "none";
-}
 
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+for (let i = 0; i < btn.length; i++) {
+
+    btn[i].onclick = function () {
+        modal[i].style.display = "block";
+        currentIndex = i;
+
     }
 }
 
 
-const modal2 = document.querySelector(".modal2");
-const btn2 = document.querySelector(".btn2")
-const span2 = document.querySelector(".close2");
+for (let i = 0; i < span.length; i++) {
 
-btn2.onclick = function () {
-    modal2.style.display = "block";
-}
+    span[i].onclick = function () {
+        modal[i].style.display = "none";
 
-span2.onclick = function () {
-    modal2.style.display = "none";
-}
-
-window.onclick = function (event) {
-    if (event.target == modal2) {
-        modal2.style.display = "none";
     }
 }
 
+window.onclick = function (event) {
+    if (event.target == modal[currentIndex]) {
+        modal[currentIndex].style.display = "none";
+    }
+}
 
+//--------- Dark-mode ------------///
+if (document.getElementById("checkbox")) {
 
+    const checkbox = document.getElementById("checkbox");
+    checkbox.addEventListener("change", () => {
+        document.body.classList.toggle("dark");
+    });
 
+}
 
